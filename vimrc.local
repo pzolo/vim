@@ -1,0 +1,81 @@
+" My self-explenatory vim conf file
+" Paolo Tosiani ptosiani[at]gmail.com
+
+" COLOR according to syntax 
+" NOTE turn off with -- syntax off
+syntax on
+set background=dark
+
+" AUTOINDENT base on file extension
+if has("autocmd")
+  filetype plugin indent on
+endif
+
+" SHOW the command you are typing at the left of the line/colum 
+" ex: If you want to delete 5 lines it shows 5d (before you press d again)
+set showcmd		
+" Highlight search. 
+" turn off for one search with :nohlsearch
+set hlsearch
+" Shows partial search match while typing
+set incsearch
+" Show line number
+set number
+
+" ############# SHORTCUTS ################
+" -- MOVE / JUMP
+" b - backward jump word
+" w - forward jump word (frist char)
+" e - forward jump word (last char)
+" G - Jump to last line
+" gg - Jump to first line
+" #G - Jump to # line
+" CTRL + G - show file status
+" CTRL + o - Go back from where you came from
+" CTRL + i - Go forward
+" % - Jumps to matching ) ] }  
+" number - motion applies.
+
+" -- DELETE
+" dd - Deletes current line
+" #dd - Deletes # lines
+" dw - Deletes the next word
+" d#w - Deletes # words 
+" x - deletes current char
+" #x - deletes # chars
+" d^ - deletes from position to begining of the line
+" d$ - deletes from position to end of the line 
+
+" -- INSERT
+" i - Insert under the cursot
+" A - Append at the end of the line
+" o - Insert in the line before the cursor
+" O - Insert in the line after the cursor 
+
+" -- UNDO / REDO
+" u - undo last modification
+" U - unod ALL changes in the line
+" CTRL + R - Redo
+
+" -- COPY (yank) / PASTE (put) / CUT (delete)
+" Same number - motion as DELETE
+" y#w - copy # words
+" yy - copy line
+" #yy - copy # lines
+" p - put the buffer AFTER the cursor / line
+" P - put the bufer BEFORE the cursor / line
+
+" -- REPLACE / CHANGE
+" r* - replaces current char with *
+" R - replaces multiple char with input
+" ce - used for CHANGE same as DELETE but goes to INSERT mode
+" #cc - changes # lines
+"
+" -- SEARCH / REPLACE
+" [#,#|#|%]s/old/new/[g] - Specify a range / one line or whole doc.
+
+" -- FILES and EXT commands
+" :!<bash command> - executes command
+" :[#|#,#]w <filename> - writes the full file or range to a new file. 
+" :r <filename> - Reads and put in current file. 
+" :r !<command> - paste command output in current file 
