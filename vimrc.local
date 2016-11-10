@@ -79,3 +79,4 @@ set number
 " :[#|#,#]w <filename> - writes the full file or range to a new file. 
 " :r <filename> - Reads and put in current file. 
 " :r !<command> - paste command output in current file 
+"" hello 
