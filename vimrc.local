@@ -80,3 +80,4 @@ set number
 " :r <filename> - Reads and put in current file. 
 " :r !<command> - paste command output in current file 
 "" hello 
+" test-- 
